@@ -15,11 +15,13 @@ pub struct Camera {
     __private: c_void
 }
 
+#[derive(Clone)]
 #[repr(C)]
 pub struct CameraText {
     pub text: [c_char; 32*1024],
 }
 
+#[derive(Clone)]
 #[repr(C)]
 pub struct CameraFilePath {
     pub name: [c_char; 128],
